@@ -40,7 +40,15 @@
                     </header>
 
                     {/* Hero */}
-                    <section id="home" className="relative overflow-hidden">
+                    {/* Hero */}
+                    <section
+                        id="home"
+                        className="relative overflow-hidden bg-center bg-no-repeat bg-cover"
+                        style={{
+                            backgroundImage:
+                                "linear-gradient(rgba(255,255,255,0.50), rgba(255,255,255,0.50)), url('./assets/top.jpg')",
+                        }}
+                    >
                         <div className="max-w-6xl mx-auto px-4 py-24 md:py-32 relative">
                             <div className="grid md:grid-cols-2 gap-10 items-center">
                                 <div>
@@ -62,8 +70,10 @@
                                         </a>
                                     </div>
                                 </div>
+
+                                {/* 右側のカード（ロゴ/イラスト） */}
                                 <div className="md:pl-8">
-                                    <figure className="aspect-[4/3] w-full rounded-3xl border border-indigo-100 bg-white p-6 shadow-sm flex flex-col items-center justify-center">
+                                    <figure className="aspect-[4/3] w-full rounded-3xl border border-indigo-100 bg-white/90 backdrop-blur p-6 shadow-sm flex flex-col items-center justify-center">
                                         <img
                                             src="./assets/img1.jpg"
                                             alt="Lean × Secure × AI-driven を象徴するロケットイラスト"
@@ -76,10 +86,10 @@
                                         </figcaption>
                                     </figure>
                                 </div>
-
                             </div>
                         </div>
                     </section>
+
 
                     {/* Services */}
                     <section id="services" className="border-t bg-white">
