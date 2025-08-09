@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>GANDHARA | 伴走型ITコンサルティング</title>
+    <meta
+      name="description"
+      content="エンジニア採用・組織構築、DX推進、情報セキュリティ、AI活用まで。月20〜40時間の稼働で着実に成果へ導く伴走型ITコンサル。"
+    />
+    <!-- Tailwind CDN（即席用） -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- React / ReactDOM / Babel（ブラウザ内でJSX変換） -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="icon" href="data:," />
+  </head>
+  <body class="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-pink-50 text-gray-900">
+    <div id="root"></div>
+
+    <script type="text/babel">
+      function App() {
+        const FORM_URL = 'https://forms.gle/zDkJudC357CcVWXY8';
+        return (
+          <div className="min-h-screen">
+            {/* Header */}
+            <header className="sticky top-0 z-30 bg-white/80 backdrop-blur border-b shadow-sm">
+              <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+                <a href="#home" className="flex items-center gap-2 font-semibold text-lg text-indigo-700">
+                  <span className="inline-block h-8 w-8 rounded-xl bg-indigo-600 text-white grid place-items-center">G</span>
+                  <span>GANDHARA</span>
+                </a>
+                <nav className="hidden md:flex items-center gap-6 text-sm">
+                  <a href="#services" className="hover:text-indigo-500">サービス</a>
+                  <a href="#pricing" className="hover:text-indigo-500">料金</a>
+                  <a href="#about" className="hover:text-indigo-500">プロフィール</a>
+                  <a href="#contact" className="hover:text-indigo-500">お問い合わせ</a>
+                </nav>
+              </div>
+            </header>
+
+            {/* Hero */}
+            <section id="home" className="relative overflow-hidden">
+              <div className="max-w-6xl mx-auto px-4 py-24 md:py-32 relative">
+                <div className="grid md:grid-cols-2 gap-10 items-center">
+                  <div>
+                    <h1 className="text-3xl md:text-5xl font-bold leading-tight tracking-tight text-indigo-800">
+                      経営と現場をつなぐ、<br />伴走型ITコンサルティング
+                    </h1>
+                    <p className="mt-5 text-gray-700 text-base md:text-lg leading-relaxed">
+                      ガンダラは、エンジニア採用・組織構築、DX推進、情報セキュリティ、AI活用まで。
+                      多彩な経験をもとに、着実に成果へ導きます。
+                    </p>
+                    <div className="mt-8 flex flex-wrap gap-3">
+                      <a href={FORM_URL} target="_blank" rel="noreferrer"
+                         className="px-6 py-3 rounded-2xl bg-indigo-600 text-white text-sm font-medium hover:bg-indigo-500">
+                        相談する（無料）
+                      </a>
+                      <a href="#services"
+                         className="px-6 py-3 rounded-2xl border border-indigo-300 text-sm font-medium hover:bg-indigo-50">
+                        サービスを見る
+                      </a>
+                    </div>
+                  </div>
+                  <div className="md:pl-8">
+                    <div className="aspect-[4/3] w-full rounded-3xl border border-indigo-100 bg-white grid place-items-center shadow-sm">
+                      <div className="text-center px-6">
+                        <div className="text-7xl">🚀</div>
+                        <p className="mt-3 font-semibold text-indigo-700">Lean × Secure × AI-driven</p>
+                        <p className="text-sm text-gray-500 mt-1">内製化・スピード・安全性の最適解</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Services */}
+            <section id="services" className="border-t bg-white">
+              <div className="max-w-6xl mx-auto px-4 py-16">
+                <h2 className="text-2xl md:text-3xl font-bold text-indigo-800">サービス</h2>
+                <p className="mt-2 text-gray-600">経営課題から現場実装まで、一気通貫で伴走します。</p>
+
+                <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  {[
+                    {
+                      title: 'エンジニア採用・組織構築',
+                      points: [
+                        '開発組織の立ち上げ/拡大',
+                        '採用戦略・採用広報・オンボーディング',
+                        '制度設計（リモート/フレックス/評価）',
+                      ],
+                    },
+                    {
+                      title: 'DX推進・業務改善',
+                      points: [
+                        '基幹業務のデジタル化・内製化',
+                        '新規Webサービスの企画〜MVP伴走',
+                        '部門横断のプロセス可視化と改善',
+                      ],
+                    },
+                    {
+                      title: '情報セキュリティ顧問（CISO代行）',
+                      points: [
+                        'セキュリティポリシー策定・教育',
+                        '認証/権限設計・脆弱性対策',
+                        'CSIRT/インシデント対応体制の整備',
+                      ],
+                    },
+                    {
+                      title: 'AI導入・活用支援',
+                      points: [
+                        '生成AI/自動化ツールの導入計画',
+                        '開発プロセスへのAI統合',
+                        '現場定着のための研修と運用設計',
+                      ],
+                    },
+                  ].map((s, i) => (
+                    <div key={i} className="rounded-3xl bg-gradient-to-br from-white to-indigo-50 p-6 border border-indigo-100 hover:shadow-md transition-shadow">
+                      <h3 className="font-semibold text-lg text-indigo-700">{s.title}</h3>
+                      <ul className="mt-3 space-y-2 text-sm text-gray-700 list-disc list-inside">
+                        {s.points.map((p, j) => (<li key={j}>{p}</li>))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            {/* Pricing */}
+            <section id="pricing" className="bg-indigo-50">
+              <div className="max-w-6xl mx-auto px-4 py-16">
+                <h2 className="text-2xl md:text-3xl font-bold text-indigo-800">料金（参考）</h2>
+                <p className="mt-2 text-gray-600">内容・難易度に応じてお見積り。まずはご相談ください。</p>
+
+                <div className="mt-10 grid md:grid-cols-3 gap-6">
+                  {[
+                    {
+                      name: 'ライト',
+                      hours: '月20時間目安',
+                      price: '税抜 10万円〜',
+                      notes: ['小規模PoC/採用設計のたたき台', '隔週ミーティング', 'チャット相談'],
+                    },
+                    {
+                      name: 'スタンダード',
+                      hours: '月40時間目安',
+                      price: '税抜 24万円〜',
+                      highlight: true,
+                      notes: ['週次ミーティング', '実装・ドキュメント作成含む'],
+                    },
+                    {
+                      name: 'インテンシブ',
+                      hours: '月60時間目安',
+                      price: '税抜 36万円〜',
+                      notes: ['重要プロジェクトの短期立ち上げ', '関係部門の巻き込み/研修', 'レポート/ロードマップ策定'],
+                    },
+                  ].map((p, i) => (
+                    <div key={i} className={`rounded-3xl border p-6 ${p.highlight ? 'bg-white border-indigo-300 shadow-md' : 'bg-white border-indigo-100'}`}>
+                      <div className="flex items-baseline justify-between">
+                        <h3 className="text-lg font-semibold text-indigo-700">{p.name}</h3>
+                        <span className="text-xs text-gray-500">{p.hours}</span>
+                      </div>
+                      <div className="mt-4 text-2xl font-bold text-indigo-800">{p.price}</div>
+                      <ul className="mt-4 space-y-2 text-sm text-gray-700 list-disc list-inside">
+                        {p.notes.map((n, j) => (<li key={j}>{n}</li>))}
+                      </ul>
+                      <a href="#contact" className="mt-6 inline-block px-4 py-2 rounded-xl border border-indigo-300 text-sm hover:bg-indigo-100">相談して見積もる</a>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            {/* About */}
+            <section id="about" className="bg-white border-y">
+              <div className="max-w-6xl mx-auto px-4 py-16">
+                <h2 className="text-2xl md:text-3xl font-bold text-indigo-800">代表プロフィール</h2>
+                <div className="mt-8 grid md:grid-cols-5 gap-6 items-start">
+                  <div className="md:col-span-2">
+                    <div className="aspect-square rounded-3xl border border-indigo-100 bg-white grid place-items-center text-6xl">👤</div>
+                  </div>
+                  <div className="md:col-span-3">
+                    <h3 className="text-lg font-semibold text-indigo-700">野田 純一（のだ じゅんいち） / ガンダラ 代表</h3>
+                    <ul className="mt-3 space-y-2 text-sm text-gray-700 list-disc list-inside">
+                      <li>IT業界20年以上。エンジニア→CTO→CEO</li>
+                      <li>年間売上100億規模のWEBサービスのグロースと運用</li>
+                      <li>開発組織の立ち上げ・採用・制度設計の実績</li>
+                      <li>大規模Webサービスの運用・情報セキュリティ統括</li>
+                      <li>生成AIの業務活用・開発プロセス統合を推進</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Contact */}
+            <section id="contact" className="bg-indigo-50">
+              <div className="max-w-6xl mx-auto px-4 py-16">
+                <h2 className="text-2xl md:text-3xl font-bold text-indigo-800">お問い合わせ</h2>
+                <p className="mt-2 text-gray-700">まずはお困りごとをお聞かせください。初回30分のオンライン相談は無料です。</p>
+
+                <div className="mt-8 grid md:grid-cols-2 gap-6">
+                  <div className="rounded-3xl border border-indigo-100 p-6 bg-white">
+                    <h3 className="font-semibold text-indigo-700">推奨の流れ</h3>
+                    <ol className="mt-3 space-y-2 text-sm text-gray-700 list-decimal list-inside">
+                      <li>課題の共有（フォーム）</li>
+                      <li>オンライン相談（30〜45分）</li>
+                      <li>提案・見積（1〜3営業日）</li>
+                      <li>トライアル（2〜4週間） → 本契約</li>
+                    </ol>
+                  </div>
+                  <div className="rounded-3xl border border-indigo-100 p-6 bg-white">
+                    <h3 className="font-semibold text-indigo-700">連絡先</h3>
+                    <ul className="mt-3 space-y-2 text-sm text-gray-700">
+                      <li>屋号：ガンダラ（GANDHARA）</li>
+                      <li>対応エリア：オンライン中心（全国）</li>
+                      <li>対応時間：平日 10:00–18:00（応相談）</li>
+                    </ul>
+                    <a href={FORM_URL} target="_blank" rel="noreferrer"
+                       className="mt-4 inline-block px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm hover:bg-indigo-500">
+                      フォームで相談する
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Footer */}
+            <footer className="border-t bg-white">
+              <div className="max-w-6xl mx-auto px-4 py-10 text-sm text-gray-600 flex flex-wrap items-center justify-between gap-4">
+                <p>© {new Date().getFullYear()} GANDHARA</p>
+              </div>
+            </footer>
+          </div>
+        );
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(<App />);
+    </script>
+  </body>
+</html>
